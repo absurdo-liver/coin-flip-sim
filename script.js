@@ -8,8 +8,8 @@ const exportButton = document.getElementById('exportButton');
 const meanMasterHDisplay = document.getElementById('meanMasterH');
 const miniMeanHDisplay = document.getElementById('miniMeanH');
 
-let a = 1;
-const maxTries = 100;
+var a = 1;
+var maxTries = 100;
 let h = [];
 let hm = [];
 let check = 0;
