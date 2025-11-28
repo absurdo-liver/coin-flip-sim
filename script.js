@@ -309,18 +309,6 @@ function exportToCsv() {
 	}
 }
 
-resetButton.addEventListener('click', hardReset);
-playPauseButton.addEventListener('click', togglePlayPause);
-runOnceButton.addEventListener('click', runOnce);
-run100Button.addEventListener('click', run100Times);
-exportButton.addEventListener('click', exportToCsv);
-
-window.addEventListener('DOMContentLoaded', () => {
-	resizeHandler();
-	startSimulation();
-});
-window.addEventListener('resize', resizeHandler);
-
 function startSimulation() {
 	intervalId = setInterval(tick, simSpeedms);
 }
@@ -330,3 +318,46 @@ function resizeHandler() {
 	canvas.height = window.innerHeight;
 	renderScene();
 }
+
+resetButton.addEventListener('click', hardReset);
+playPauseButton.addEventListener('click', togglePlayPause);
+runOnceButton.addEventListener('click', runOnce);
+run100Button.addEventListener('click', run100Times);
+exportButton.addEventListener('click', exportToCsv);
+
+window.addEventListener('resize', resizeHandler);
+window.addEventListener('DOMContentLoaded', () => {
+	resizeHandler();
+	startSimulation();
+	console.log(
+  `welcome developper / console enthusiast
+================================================
+i won't try to bore you with any boring talk
+so i'll just tell you what you can do here
+without anything breaking (hopefully)
+================================================
+you can change the initial value by accessing:
+variable: a
+default value: 1
+requires: integer (safely) or float (not tested)
+value describes initial value before growth/decay
+------------------------------------------------
+you can change the number of iterations by accessing:
+variable: maxTries
+default value: 100
+requires: integer (safely) or float (not tested)
+------------------------------------------------
+you can change the simulation speed by accessing:
+variable: simSpeedms
+default value: 10
+requires: integer
+value describes milliseconds in between iterations
+------------------------------------------------
+you can change the isPlaying state by accessing:
+variable: isPlaying
+default value: true
+requires: boolean
+value describes wether the simulation is running
+------------------------------------------------`
+);
+});
