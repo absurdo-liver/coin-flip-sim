@@ -7,7 +7,7 @@ const run100Button = document.getElementById('run100Button');
 const exportButton = document.getElementById('exportButton');
 const meanMasterHDisplay = document.getElementById('meanMasterH');
 const miniMeanHDisplay = document.getElementById('miniMeanH');
-const WLRatioDisplay = document.getElementById('WLRatioDisplay');
+const wlRatioDisplay = document.getElementById('WLRatioDisplay');
 
 var a = 1;
 var maxTries = 100;
