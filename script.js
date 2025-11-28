@@ -14,6 +14,7 @@ let h = [];
 let hm = [];
 let check = 0;
 var simSpeedms = 10;
+var WLratio = [];
 
 let intervalId;
 let isPlaying = true;
@@ -21,8 +22,10 @@ let isPlaying = true;
 function operation() {
 	if (Math.round(Math.random()) === 1) {
 		a *= 1.1;
+		WLratio.push(1);
 	} else {
 		a *= 0.9;
+		WLratio.push(0);
 	}
 	h.push(a);
 }
