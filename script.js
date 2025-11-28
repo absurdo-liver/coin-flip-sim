@@ -364,3 +364,22 @@ value describes wether the simulation is running
 ------------------------------------------------`
 );
 });
+
+/*
+for funsies you can paste this into the console:
+
+maxTries = 500;
+hardReset()
+const tempInt = setInterval(() => {
+    let countW = 0;
+let countL = 0;
+for(let i = 0; i < WLratio.length; i++){
+    if(WLratio[i] === 1){
+        countW++
+    } else {
+        countL++
+    }
+}
+console.log(countW, countL, countW/countL);
+}, 5000);
+*/
