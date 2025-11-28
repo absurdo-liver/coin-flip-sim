@@ -7,6 +7,7 @@ const run100Button = document.getElementById('run100Button');
 const exportButton = document.getElementById('exportButton');
 const meanMasterHDisplay = document.getElementById('meanMasterH');
 const miniMeanHDisplay = document.getElementById('miniMeanH');
+const WLRatioDisplay = document.getElementById('WLRatioDisplay');
 
 var a = 1;
 var maxTries = 100;
@@ -28,6 +29,15 @@ function operation() {
 		WLratio.push(0);
 	}
 	h.push(a);
+  wlRatioDisplay.textContent = wlratiofunction();
+}
+
+function wlratiofunction(){
+	let wins = 0;
+	let losses = 0;
+	for(let i = 0; i < WLratio.length; i++) { if(WLratio[i] === 1){ wins++ } else { losses++ }}
+	let part = Math.round((wins/losses)*1000)/1000;
+	return `${wins} : ${losses} | ${part}`;
 }
 
 function reset() {
@@ -364,22 +374,3 @@ value describes wether the simulation is running
 ------------------------------------------------`
 );
 });
-
-/*
-for funsies you can paste this into the console:
-
-maxTries = 500;
-hardReset()
-const tempInt = setInterval(() => {
-    let countW = 0;
-let countL = 0;
-for(let i = 0; i < WLratio.length; i++){
-    if(WLratio[i] === 1){
-        countW++
-    } else {
-        countL++
-    }
-}
-console.log(countW, countL, countW/countL);
-}, 5000);
-*/
