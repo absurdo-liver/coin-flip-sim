@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coin flip sim</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div id="controls">
+        <button id="playPauseButton">Pause</button>
+        <button id="runOnceButton">Run 1 Iteration</button>
+        <button id="run100Button">Run 100 Iterations</button>
+        <button id="exportButton">Export as CSV</button>
+        <button id="resetButton">Hard Reset</button>
+    </div>
+    <div id="stats">
+        <p>Mean Master H: <span id="meanMasterH">0</span></p>
+        <p>Mini Mean H: <span id="miniMeanH">0</span></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
