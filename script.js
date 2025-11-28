@@ -36,8 +36,8 @@ function wlratiofunction(){
 	let wins = 0;
 	let losses = 0;
 	for(let i = 0; i < WLratio.length; i++) { if(WLratio[i] === 1){ wins++ } else { losses++ }}
-	let part = Math.round((wins/losses)*1000)/1000;
-	return `${wins} : ${losses} | ${part}`;
+	let part = Math.round((wins/losses)*100)/100;
+	return `${wins} : ${losses} /n ${part}`;
 }
 
 function reset() {
